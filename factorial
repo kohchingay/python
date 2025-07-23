@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     </head>
-    <body>
+    <body><py-script>
 
     def factorial():
         n = int(input("Enter an integer:"))
@@ -17,5 +17,5 @@
 
     factorial()
 
-    </body>
+    </py-script></body>
 </html>
