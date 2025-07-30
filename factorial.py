@@ -2,19 +2,17 @@ import streamlit as st
 
 st.title("Factorial Calculator")
 
-n = st.number_input("Enter an integer:", min_value=0, step=1, format="%d")
+def factorial():
+    n = int(st.number_input("Enter an integer:"))
+    initial=n
+    result=n
+    for i in range(n-2):
+        result=result*(n-1)
+        n-=1
+        st.write(result)
+    st.write(f"\nThe factorial of {initial} is {result}.")
 
-def compute_factorial(x):
-    if x == 0 or x == 1:
-        return 1
-    result = 1
-    for i in range(2, x+1):
-        result *= i
-    return result
-
-if st.button("Calculate"):
-    result = compute_factorial(n)
-    st.write(f"The factorial of {int(n)} is {result}.")
+factorial()
 
 import streamlit as st
 import numpy as np
